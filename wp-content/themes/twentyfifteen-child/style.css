@@ -141,3 +141,7 @@ p {
 .entry-footer {
 	font-family: 'Lato', sans-serif !important;
 }
+
+#author-image {
+	text-align: center !important;
+}
