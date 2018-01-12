@@ -69,15 +69,35 @@ class ReadMoreData {
 		$googleFonts = array(
 			'Diplomata SC' => 'Diplomata SC',
 			'flavors'=>'Flavors',
-			'open-sans'=> 'Open Sans',
-			'droid-sans'=>'Droid Sans',
-			'droid-serif'=>'Droid Serif',
+			'Open Sans'=> 'Open Sans',
+			'Droid Sans'=>'Droid Sans',
+			'Droid Serif'=>'Droid Serif',
 			'chewy'=>'Chewy',
 			'oswald' => 'Oswald',
-			'Dancing Script'=> 'Dancing Script'
-
+			'Dancing Script'=> 'Dancing Script',
+			'Merriweather'=>'Merriweather',
+			'Roboto Condensed'=>'Roboto Condensed',
+			'Oswald'=>'Oswald',
+			'PT Sans'=>'PT Sans',
+			'Montserrat'=>'Montserrat'
 		);
 
+		$btnFontWeight = array(
+			'normal' => 'Normal',
+			'bold' => 'Bold',
+			'bolder' => 'Bolder',
+			'900' => '900',
+			'800' => '800',
+			'700' => '700',
+			'600' => '600',
+			'500' => '500',
+			'400' => '400',
+			'300' => '300',
+			'200' => '200',
+			'100' => '100',
+			'initial' => 'Initial',
+			'inherit' => 'Inherit',
+		);
 		$selectedPost = self::getSelectedPost();
 
 		$arrays = array(
@@ -85,7 +105,8 @@ class ReadMoreData {
 			"vertical"=>$vertical,
 			'googleFonts'=>$googleFonts,
 			'hoverEffect'=>$hoverEffect,
-			'selectedPost'=>$selectedPost
+			'selectedPost'=>$selectedPost,
+			'btnFontWeight'=>$btnFontWeight
 		);
 		return $arrays;
 	}
@@ -102,6 +123,8 @@ class ReadMoreData {
 			'btn-border-radius' => '20px',
 			'horizontal' => 'center',
 			'vertical' => 'bottom',
+			'hidden-content-bg-color' => '',
+			'hidden-content-text-color' => '',
 			'show-only-mobile' => '',
 			'type' => 'button',
 			'expander-font-family' => 'Diplomata SC',
@@ -123,6 +146,10 @@ class ReadMoreData {
 		$dataDefault['yrm-popup-esc-key'] = true;
 		$dataDefault['yrm-popup-close-button'] = true;
 		$dataDefault['yrm-popup-overlay-click'] = true;
+		$dataDefault['yrm-popup-overlay-color'] = '';
+		$dataDefault['yrm-popup-content-color'] = '';
+		$dataDefault['yrm-popup-content-padding'] = 0;
+		$dataDefault['yrm-btn-font-weight'] = 'normal';
 		return $dataDefault;
 	}
 

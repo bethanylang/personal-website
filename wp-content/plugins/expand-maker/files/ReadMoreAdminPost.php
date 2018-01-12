@@ -75,6 +75,8 @@ Class ReadMoreAdminPost {
 			$options['hover-effect'] = $this->expmSanitizeData('hover-effect');
 			$options['btn-hover-text-color'] = $this->expmSanitizeData('btn-hover-text-color');
 			$options['btn-hover-bg-color'] = $this->expmSanitizeData('btn-hover-bg-color');
+			$options['hidden-content-bg-color'] = $this->expmSanitizeData('hidden-content-bg-color');
+			$options['hidden-content-text-color'] = $this->expmSanitizeData('hidden-content-text-color');
 			$selectedPosts = @$_POST['yrm-selected-post'];
 			$options['yrm-selected-post'] = $selectedPosts;
 			$options['button-for-post'] = $this->expmSanitizeData('button-for-post');
@@ -97,8 +99,12 @@ Class ReadMoreAdminPost {
 			$options['yrm-popup-esc-key'] = $this->expmSanitizeData('yrm-popup-esc-key');
 			$options['yrm-popup-close-button'] = $this->expmSanitizeData('yrm-popup-close-button');
 			$options['yrm-popup-overlay-click'] = $this->expmSanitizeData('yrm-popup-overlay-click');
+			$options['yrm-popup-overlay-color'] = $this->expmSanitizeData('yrm-popup-overlay-color');
+			$options['yrm-popup-content-color'] = $this->expmSanitizeData('yrm-popup-content-color');
+			$options['yrm-popup-content-padding'] = $this->expmSanitizeData('yrm-popup-content-padding');
 		}
-
+		$options['yrm-btn-font-weight'] = $this->expmSanitizeData('yrm-btn-font-weight');
+		
 		$options = json_encode($options);
 		$id = $this->expmSanitizeData('read-more-id');
 		$title = $this->expmSanitizeData('expm-title');

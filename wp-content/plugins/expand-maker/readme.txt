@@ -2,8 +2,8 @@
 Contributors: Edmon Parker
 Tags: Tags: read more ,expander, expand, expandable,read less ,Accordion,show more,Do more,WP show more, Expanding, collapsible, display, expandable content,  show more, hidden, hide, javascript, jquery, more, read me,  shortcode
 Requires at least: 3.8
-Tested up to: 4.8
-Stable tag: 2.0.2
+Tested up to: 4.8.9
+Stable tag: 2.0.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,6 +28,7 @@ https://www.youtube.com/watch?v=ML9Xmbs0TvU
 * Read more button width - Read more button custom dimension
 * Read more button height - Read more button custom dimension
 * Read more Font size - Read more button custom font size
+* Read more button font weight - Read more button custom font weight
 * Expand animation duration - Expand custom animation duration
 
 ** Read more - PRO features: **
@@ -42,16 +43,19 @@ https://www.youtube.com/watch?v=ML9Xmbs0TvU
 * Show Read more only on mobile devices - after activating this option, Read more will be shown only on mobile devices.
 * Read more button background color on hover effect - after mouse hover effect read more button change background color.
 * Read more button text color on hover effect - after mouse hover effect read more button change text color.
-* <strong>Popup</strong> type
-* <strong>Popup</strong> width
-* <strong>Popup</strong> height
-* <strong>Popup</strong> max width
-* <strong>Popup</strong> max height
-* <strong>Popup</strong> initial width
-* <strong>Popup</strong> initial height
-* <strong>Popup</strong> show close button
-* <strong>Popup</strong> dismiss on overlay click
-* <strong>Popup</strong> dismiss on esc key
+* Popup type
+* Popup width
+* Popup height
+* Popup max width
+* Popup max height
+* Popup initial width
+* Popup initial height
+* Popup show close button
+* Popup dismiss on overlay click
+* Popup dismiss on esc key
+* Popup overlay color
+* Popup content color
+* Popup content padding
 
 <a href="http://edmion.esy.es/" target="_blank" >Get Read More PRO package</a>
 
@@ -62,25 +66,16 @@ Shortcode example:
 If you think that you found a bug in Expander Maker plugin or have any questions, please feel free to contact us at <b>edmon.parker@gmail.com</b>.
 
 == Changelog ==
-= 2.0.8 =
-* Trigering js functions 
-* New Analytics extension (Pro)
+= 2.0.9 =
+* Button font weight (new)
+* Button 5 new fonts (new PRO)
+* hidden content text color (new PRO)
+* hidden content background color (new PRO)
+* popup overlay color (new PRO)
+* popup content color (new PRO)
+* popup content padding (new PRO)
 * Bug fixed
-
-= 2.0.7 =
 * Code improvement
-* Feature plugins section
-
-= 2.0.6 =
-* Add read more button to selected post after x words automatically(Pro)
-* Code optimization
-
-= 2.0.5 =
-* Bug fixed
-* Read more localization
-
-= 2.0.4 =
-* Add new read more type Inline read more type
 
 = 2.0.3 =
 * Button hover effect (new option)
@@ -120,7 +115,7 @@ If you think that you found a bug in Expander Maker plugin or have any questions
 * code improvement
 
 = 1.1.7 =
-* multiple values of “more” and “less” examples 
+* multiple values of “more” and “less” examples
 [expander_maker more="Read more" less="Read less"]Hidden text[/expander_maker]
 [expander_maker more="Read more1" less="Read less1"]Hidden text[/expander_maker]
 * Bug fixed
@@ -133,35 +128,30 @@ If you think that you found a bug in Expander Maker plugin or have any questions
 = 1.0.1 =
 * Fixed button style.
 
-= 1.0.2 = 
+= 1.0.2 =
 * Bug fixed.
 * Changed shortcode name
 * Fixed button style.
 
-= 1.0.3 = 
+= 1.0.3 =
 * Bug fixed.
 * Button width option.
 * Button height option.
 * Animation duration option.
 * Fixed button style.
 
-= 1.1.3 = 
+= 1.1.3 =
 * Bug fixed.
 * Font size.
 * Pro version.
 * Admin view change.
 
-= 1.1.5 = 
+= 1.1.5 =
 * Bug fixed.
 
 == Frequently Asked Questions ==
-**How to upgrade to Pro version**
 
-For upgrade  you should be do following.
-1. Deactivate Free plugin.
-2. In your Wp dashboart click plugins section in the top there is Add new Then click upload plugin and Chuse Read more pro zip and click install.
-3. Click Activae plugin and in your plugins sectioction you will see plugin.
-
+Comming soon.
 
 == Screenshots ==
 1. Read mores

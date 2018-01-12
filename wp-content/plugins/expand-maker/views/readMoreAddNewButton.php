@@ -72,6 +72,14 @@ if(!isset($type)) {
 					</div>
 					<div class="col-md-2 expm-option-info">(in pixels)</div>
 				</div>
+				<div class="row row-static-margin-bottom">
+					<div class="col-xs-5">
+						<label class="control-label" for="textinput"><?php _e('Font weight', YRM_LANG);?>:</label>
+					</div>
+					<div class="col-xs-4">
+						<?php echo $functions::createSelectBox($params['btnFontWeight'],'yrm-btn-font-weight', esc_attr($yrmBtnFontWeight));?><br>
+					</div>
+				</div>
 				<?php if(!ReadMore::RemoveOption('animation-duration')): ?>
 				<div class="row">
 					<div class="col-xs-5">
@@ -100,7 +108,7 @@ if(!isset($type)) {
 				<?php if(!ReadMore::RemoveOption('btn-background-color')): ?>
 				<div class="row row-static-margin-bottom">
 					<div class="col-xs-5">
-						<label class="control-label" for="textinput"><?php _e('Background Color', YRM_LANG);?>:</label>
+						<label class="control-label" for="textinput"><?php _e('Button Background Color', YRM_LANG);?>:</label>
 					</div>
 					<div class="col-xs-4">
 						<input type="text" class="input-md background-color" name="btn-background-color" value="<?php echo $btnBackgroundColor ?>"><br>
@@ -109,7 +117,7 @@ if(!isset($type)) {
 				<?php endif; ?>
 				<div class="row row-static-margin-bottom">
 					<div class="col-xs-5">
-						<label class="control-label" for="textinput"><?php _e('Text Color', YRM_LANG);?>:</label>
+						<label class="control-label" for="textinput"><?php _e('Button Text Color', YRM_LANG);?>:</label>
 					</div>
 					<div class="col-xs-4">
 						<input type="text" class="input-md btn-text-color" name="btn-text-color" value="<?php echo esc_attr($btnTextColor)?>"><br>
@@ -117,7 +125,7 @@ if(!isset($type)) {
 				</div>
 				<div class="row row-static-margin-bottom">
 					<div class="col-xs-5">
-						<label class="control-label" for="textinput"><?php _e('Font Family', YRM_LANG);?>:</label>
+						<label class="control-label" for="textinput"><?php _e('Button Font Family', YRM_LANG);?>:</label>
 					</div>
 					<div class="col-xs-4">
 						<?php echo $functions::createSelectBox($params['googleFonts'],"expander-font-family", esc_attr($expanderFontFamily));?><br>
@@ -125,7 +133,7 @@ if(!isset($type)) {
 				</div>
 				<div class="row">
 					<div class="col-xs-5">
-						<label class="control-label" for="textinput"><?php _e('Border radius', YRM_LANG);?>:</label>
+						<label class="control-label" for="textinput"><?php _e('Button Border Radius', YRM_LANG);?>:</label>
 					</div>
 					<div class="col-xs-4">
 						<input type="text" class="form-control input-md btn-border-radius" name="btn-border-radius" value="<?php echo esc_attr($btnBorderRadius)?>"><br>
@@ -133,7 +141,7 @@ if(!isset($type)) {
 				</div>
 				<div class="row row-static-margin-bottom">
 					<div class="col-xs-5">
-						<label class="control-label" for="textinput"><?php _e('Horizontal alignment', YRM_LANG);?>:</label>
+						<label class="control-label" for="textinput"><?php _e('Button Horizontal alignment', YRM_LANG);?>:</label>
 					</div>
 					<div class="col-xs-4">
 						<?php echo $functions::createSelectBox($params['horizontalAlign'],"horizontal", esc_attr($horizontal));?><br>
@@ -141,10 +149,26 @@ if(!isset($type)) {
 				</div>
 				<div class="row row-static-margin-bottom">
 					<div class="col-xs-5">
-						<label class="control-label" for="textinput"><?php _e('Vertical alignment', YRM_LANG);?>:</label>
+						<label class="control-label" for="textinput"><?php _e('Button Vertical alignment', YRM_LANG);?>:</label>
 					</div>
 					<div class="col-xs-4">
 						<?php echo $functions::createSelectBox($params['vertical'],"vertical", esc_attr($vertical));?><br>
+					</div>
+				</div>
+				<div class="row row-static-margin-bottom">
+					<div class="col-xs-5">
+						<label class="control-label" for="textinput"><?php _e('Hidden Content Background color', YRM_LANG);?>:</label>
+					</div>
+					<div class="col-xs-4">
+						<input type="text" class="input-md hidden-content-bg-color" name="hidden-content-bg-color" value="<?php echo esc_attr($hiddenContentBgColor)?>"><br>
+					</div>
+				</div>
+				<div class="row row-static-margin-bottom">
+					<div class="col-xs-5">
+						<label class="control-label" for="textinput"><?php _e('Hidden Content Text color', YRM_LANG);?>:</label>
+					</div>
+					<div class="col-xs-4">
+						<input type="text" class="input-md hidden-content-text-color" name="hidden-content-text-color" value="<?php echo esc_attr($hiddenContentTextColor)?>"><br>
 					</div>
 				</div>
 				<div class="row row-static-margin-bottom">
@@ -157,7 +181,7 @@ if(!isset($type)) {
 				</div>
 				<div class="row row-static-margin-bottom">
 					<div class="col-xs-5">
-						<label class="control-label" for="textinput"><?php _e('Hover effect', YRM_LANG);?>:</label>
+						<label class="control-label" for="textinput"><?php _e('Button Hover effect', YRM_LANG);?>:</label>
 					</div>
 					<div class="col-xs-4">
 						<input type="checkbox" name="hover-effect" class="yrm-accordion-checkbox" <?php echo $hoverEffect;?>>
@@ -231,4 +255,5 @@ if(!isset($type)) {
 	</div>
 </div>
 </form>
+	<?php echo ReadMoreFunctions::getFooterReviewBlock();?>
 </div>

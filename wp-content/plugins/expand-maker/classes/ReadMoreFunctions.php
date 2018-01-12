@@ -80,4 +80,36 @@ class ReadMoreFunctions {
 		}
 		return $radioButtons;
 	}
+
+	public static function getFooterReviewBlock() {
+
+		ob_start();
+		?>
+		<div class="clear"></div>
+		<div class="yrmAdminFooterShell">
+			<div class="yrmAdminFooterShell">
+				Read More by Edmon		Version:
+				<a target="_blank" href="http://wordpress.org/plugins/contact-form-by-supsystic/changelog/"><?php echo YRM_VERSION_TEXT; ?></a>
+			</div>
+			<?php if(YRM_PKG == YRM_FREE_PKG):?>
+			<div class="yrmAdminFooterShell">|</div>
+				<div class="yrmAdminFooterShell">
+				Go&nbsp;<a target="_blank" href="<?php echo YRM_PRO_URL;?>">PRO</a>
+			</div>
+			<?php endif; ?>
+			<div class="yrmAdminFooterShell">|</div>
+				<div class="yrmAdminFooterShell">
+				<a target="_blank" href="https://wordpress.org/support/plugin/expand-maker">Support</a>
+			</div>
+			<div class="yrmAdminFooterShell">|</div>
+			<div class="yrmAdminFooterShell">
+				Add your <a target="_blank" href="https://wordpress.org/support/plugin/expand-maker/reviews/?filter=5">★★★★★</a> on wordpress.org.
+			</div>
+		</div>
+		<?php
+		$output = ob_get_contents();
+		ob_end_clean();
+
+		return $output;
+	}
 }

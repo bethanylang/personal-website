@@ -42,6 +42,7 @@ Class ReadMorePages {
 		$buttonHeight = $dataObj->getOptionValue('button-height');
 		$fontSize = $dataObj->getOptionValue('font-size');
 		$yrmBtnHoverAnimate = $dataObj->getOptionValue('yrm-btn-hover-animate');
+		$yrmBtnFontWeight = $dataObj->getOptionValue('yrm-btn-font-weight');
 		$animationDuration = $dataObj->getOptionValue('animation-duration');
 		$btnBackgroundColor = $dataObj->getOptionValue('btn-background-color');
 		$btnTextColor = $dataObj->getOptionValue('btn-text-color');
@@ -49,6 +50,8 @@ Class ReadMorePages {
 		$btnBorderRadius = $dataObj->getOptionValue('btn-border-radius');
 		$horizontal = $dataObj->getOptionValue('horizontal');
 		$vertical = $dataObj->getOptionValue('vertical');
+		$hiddenContentBgColor = $dataObj->getOptionValue('hidden-content-bg-color');
+		$hiddenContentTextColor = $dataObj->getOptionValue('hidden-content-text-color');
 		$showOnlyMobile = $dataObj->getOptionValue('show-only-mobile', true);
 		$hoverEffect = $dataObj->getOptionValue('hover-effect', true);
 		$btnHoverTextColor = $dataObj->getOptionValue('btn-hover-text-color');

@@ -78,11 +78,15 @@ if(!class_exists('YrmConfig')) {
 			}
 
 			if(!defined('YRM_VERSION')) {
-				define("EXPM_VERSION", 2.08);
+				define("EXPM_VERSION", 2.091);
+			}
+
+			if(!defined('YRM_VERSION_TEXT')) {
+				define("YRM_VERSION_TEXT", '2.0.9');
 			}
 
 			if(!defined('EXPM_VERSION_PRO')) {
-				define("EXPM_VERSION_PRO", 1.14);
+				define("EXPM_VERSION_PRO", 1.15);
 			}
 
 			if(!defined('YRM_FREE_PKG')) {

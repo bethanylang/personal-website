@@ -29,6 +29,7 @@
 	<?php endif?>
 </div>
 <?php
+
 $isAnalyticsExist = get_option('YrmAnalytics');
 if(!$isAnalyticsExist) : ?>
 <div class="yrm-add-new-extensions-wrapper">

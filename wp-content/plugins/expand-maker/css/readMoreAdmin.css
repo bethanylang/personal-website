@@ -366,3 +366,15 @@ a.wp-color-result {
     display: inline-block;
     margin-top: 8px;
 }
+
+.yrmAdminFooterShell {
+	display: inline;
+}
+
+.yrm-popup-options {
+	margin-top: 15px;
+}
+
+.yrm-popup-theme-wrapper {
+	margin-bottom: 10px;
+}

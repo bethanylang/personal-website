@@ -28,6 +28,7 @@ YrmMore.prototype.setStyles = function () {
 	this.setChengHorizontalAlign(".yrm-btn-wrapper-"+id,data['horizontal']);
 
 	this.setFontSize(".yrm-button-text-"+id, data['font-size']);
+	this.setFontWeight(".yrm-button-text-"+id, data['yrm-btn-font-weight']);
 	if(typeof this.proInit == 'function') {
 		this.proInit();
 	}
@@ -78,6 +79,13 @@ YrmMore.prototype.setFontSize = function (element, fontSize) {
 	})
 };
 
+YrmMore.prototype.setFontWeight = function (element, fontWeight) {
+
+	jQuery(element).css({
+		'font-weight': fontWeight
+	})
+};
+
 YrmMore.prototype.setChengHorizontalAlign = function(element, val) {
 
 	jQuery(element).css({"text-align": val});
@@ -88,13 +96,16 @@ YrmMore.prototype.livePreview = function() {
 	this.changeButtonWidth();
 	this.changeButtonHeight();
 	this.changeButtonFontSize();
+	this.changeButtonFontWeight();
 	this.changeBtnBackgroundColor();
 	this.changeBtnTextColor();
 	this.changeBorderRadius();
 	this.changeHorizontalAligment();
 	this.addFontFamilyOptionsView();
 	this.changeButtonFontFamily();
-	this.changeHoverEffect()
+	this.changeHoverEffect();
+	this.changeHiddenContentBgColor();
+	this.changeHiddenContentTextColor();
 };
 
 YrmMore.prototype.changeHoverEffect = function() {
@@ -151,6 +162,15 @@ YrmMore.prototype.changeButtonFontSize = function() {
 	});
 };
 
+YrmMore.prototype.changeButtonFontWeight = function() {
+	jQuery('[name="yrm-btn-font-weight"]').change(function() {
+		var fontWeight = jQuery(this).val();
+		jQuery(".yrm-button-text").css({
+			'font-weight': fontWeight
+		})
+	});
+};
+
 YrmMore.prototype.changeBtnBackgroundColor = function() {
 	var that = this;
 	if(typeof jQuery.fn.wpColorPicker != 'undefined') {
@@ -199,3 +219,35 @@ YrmMore.prototype.changeHorizontalAligment = function() {
 	});
 };
 
+YrmMore.prototype.changeHiddenContentBgColor = function () {
+
+	if(!jQuery('.hidden-content-bg-color').length || typeof jQuery.fn.wpColorPicker == 'undefined') {
+		return;
+	}
+	var that = this;
+
+	jQuery('.hidden-content-bg-color').wpColorPicker({
+		change: function () {
+			var val = jQuery(this).val();
+			var elemnt = ".yrm-inner-content-wrapper";
+			that.setContentBgColor(elemnt, val);
+		}
+	});
+};
+
+YrmMore.prototype.changeHiddenContentTextColor = function () {
+
+	if(!jQuery('.hidden-content-text-color').length || typeof jQuery.fn.wpColorPicker == 'undefined') {
+		return;
+	}
+
+	var that = this;
+
+	jQuery('.hidden-content-text-color').wpColorPicker({
+		change: function () {
+			var val = jQuery(this).val();
+			var elemnt = ".yrm-inner-content-wrapper";
+			that.setContentTextColor(elemnt, val);
+		}
+	});
+};
